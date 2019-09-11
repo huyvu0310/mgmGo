@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeLeaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title>mgm go</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/home/index.css}"/>
+    <link rel="stylesheet" href="../../../static/css/user/profile.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/tags.css}"/>
+</head>
+<body>
+
+<div layout:fragment="main-content">
+    <div class="profile-nav">
+        <th:block th:replace="user/fragments/nav-profile"></th:block>
+    </div>
+    <div class="py-3">
+        <p th:unless="${pagingInfo.totalRecord}">No activity is created by you</p>
+        <div class="lazy-loading activities" id="activities"
+             th:attr="current-page=${pagingInfo.currentPage},size-of-pages=${pagingInfo.sizeOfPages},link=@{/profile/myactivities/more/}">
+            <th:block th:replace="activity/fragments/list-activities"></th:block>
+        </div>
+        <button th:if="${not #lists.isEmpty(activities) and pagingInfo.currentPage lt pagingInfo.sizeOfPages}"
+                type="button"
+                id="see-more"
+                class="btn col-12">See more
+        </button>
+        <div class="col-12 text-center py-3 d-none btn-loading">
+            <span class="spinner-border spinner-border-sm loading text-secondary" role="status"
+                  aria-hidden="true"></span>
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="custom-script">
+    <script type="text/javascript" src="/static/js/lazy-loading.js"></script>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<th:block xmlns:th="www.thymeLeaf.org" th:fragment="upload">
+    <th:block th:if="${not #lists.isEmpty(activities)}" th:each="item: ${activities}">
+        <a class="activity-item mt-1" th:href="@{/activity/{id}(id=${item.id})}" id="activity-link"
+           th:title="${item.name}">
+            <div class="activity-img--wrapper col-lg-2 col-4 col-sm-3 mr-1 pl-0 mt-1">
+                <img id="image-on-home-page"
+                     th:src="${item.images.size()!=0}?@{/api/image/}+${item.images.get(0)}:@{/static/images/no-img.png}"
+                     th:alt="${item.name}"/>
+            </div>
+            <div class="col-lg-10 col-8 pl-0 pl-md-2">
+                <p class="activity-name" th:text="${item.name}"></p>
+                <div th:if="${item.address != null && item.address != ''}"
+                     class="d-flex text-dark activity-item-location font-weight-light">
+                    <i class="fas fa-map-marker-alt fa-lg mt-1 text-danger mr-2 address-icon" aria-hidden="true"></i>
+                    <span th:text="${item.address}"></span>
+                </div>
+                <div class="tag-box tag-box-display-only mt-2">
+                    <th:block th:each="tag: ${item.getTags()}">
+                        <div class="tag-box-element" th:text="${tag.content}"></div>
+                    </th:block>
+                </div>
+            </div>
+        </a>
+    </th:block>
+</th:block>

@@ -1,0 +1,24 @@
+#main_label{
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#login_form{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+#login_button{
+    width: 100%;
+}
+
+#login_form .form-check{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

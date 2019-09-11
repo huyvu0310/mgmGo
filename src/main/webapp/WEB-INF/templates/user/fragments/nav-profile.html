@@ -1,0 +1,18 @@
+<th:block xmlns:th="www.thymeleaf.org" th:fragment="nav_profile">
+    <th:block>
+        <ul class="nav nav-tabs px-0 justify-content-center justify-content-sm-start">
+            <li th:class="${viewName != 'userProfile'} ? 'nav-item' :'nav-item active'">
+                <a class="nav-link" th:href="@{/profile/userprofile}"><i class="fa fa-user-circle m-2 ml-sm-0"></i><span
+                        class="d-none d-sm-inline-block">User profile</span></a>
+            </li>
+            <li th:class="${viewName != 'myActivities'} ? 'nav-item' :'nav-item active'">
+                <a class="nav-link" th:href="@{/profile/myactivities}"><i class="fa fa-th-list m-2 ml-sm-0"></i><span
+                        class="d-none d-sm-inline-block">My activities</span></a>
+            </li>
+            <li th:class="${viewName != 'favorite'} ? 'nav-item' :'nav-item active'">
+                <a class="nav-link" th:href="@{/profile/favorite}"><i class="fa fa-heart m-2 ml-sm-0"></i><span
+                        class="d-none d-sm-inline-block">Favorite activities</span></a>
+            </li>
+        </ul>
+    </th:block>
+</th:block>

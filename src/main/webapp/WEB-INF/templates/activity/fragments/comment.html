@@ -1,0 +1,23 @@
+<th:block xmlns:th="www.thymeLeaf.org" th:fragment="comment">
+    <meta charset="UTF-8">
+    <div id="comment-list">
+        <div th:if="${not #lists.isEmpty(comments)}" th:each="item: ${comments}" class="comment">
+            <div class="mb-1 comment user">
+                <div class="mr-2">
+                    <img class="icon-user-comment"
+                         th:src="${item.userProfileDTO.getImageId()}?@{/api/image/}+${item.userProfileDTO.getImageId()}:@{/static/images/default_profile_picture.png}">
+                </div>
+                <div class="card bg-light pl-2 pt-1 pb-1 pr-2 mb-2  w-100  comment-box">
+                    <div class="d-inline-flex mb-1">
+                        <div class="font-weight-bold mr-2 username-comment">
+                            <p class="display-name mb-0" th:text="${item.userProfileDTO.getDisplayName()}"></p>
+                        </div>
+                        <p class="date-create mb-0 font-italic"
+                           th:text="' on ' + ${#dates.format(item.dateCreate, 'dd-MM-yyyy')}"></p>
+                    </div>
+                    <pre th:text="${item.content}"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>

@@ -1,0 +1,93 @@
+<th:block xmlns:th="www.thymeLeaf.org" th:fragment="upload">
+    <div class="wrapper-detail">
+        <div class="image-wrapper-detail">
+            <img id="image-on-detail-page"
+                 class="animated-background"
+                 th:order-image="${activityDetailDTO.images.size() != 0}?1:-1"
+                 th:image-id="${activityDetailDTO.images.size() != 0}?${activityDetailDTO.images.get(0)}:-1"
+                 th:src="${activityDetailDTO.images !=null && !activityDetailDTO.images.isEmpty()}?@{/api/image/}+${activityDetailDTO.images.get(0)}:@{/static/images/no-img.png}"
+                 alt=""/>
+            <label id="btn-update"
+                   th:class="${activityDetailDTO.images.size() != 0}?@{p-image }:@{p-image d-none}"
+                   data-toggle="modal" data-target="#exampleModalCenter">
+                <i class="fa fa-camera fa-lg upload-button m-0 md-2"></i>
+                <p class="message p-2">Update image</p>
+            </label>
+            <input id='max-number-upload-images' th:value="${maxNumberUploadImages}" type="hidden">
+        </div>
+        <div th:class="thumbnails">
+            <th:block th:if="${not #lists.isEmpty(activityDetailDTO.images)}"
+                      th:each="item,iter: ${activityDetailDTO.images}">
+                <div class="thumbnail">
+                    <img th:class="${iter.index != 0}?@{thumbnail-image animated-background}:@{thumbnail-image animated-background image-active}"
+                         th:order-image="${iter.index+1}"
+                         th:image-id="${item}"
+                         th:src="@{/api/image/}+${item}"/>
+                    <label class="icon-update"
+                           title="Update image."
+                           data-toggle="modal" data-target="#exampleModalCenter">
+                        <i class="fa fa-camera p-md-2"></i>
+                    </label>
+                </div>
+            </th:block>
+            <th:block th:if="${activityDetailDTO.images.size() != maxNumberUploadImages}">
+                <div data-toggle="modal" data-target="#exampleModalCenter"
+                     class="add-frame"
+                     id="btn-upload">
+                    <div class="d-flex justify-content-center align-items-center plus-icon-add-frame"
+                         title="Upload new image.">+</div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Upload image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="upload-image-form"
+                      th:action="@{/api/image/activity/{activityId}(activityId=${activityDetailDTO.getId()})}"
+                      method="post"
+                      enctype="multipart/form-data">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                    <div class="modal-body">
+                        <input id="activity-id" type="text" th:value="${activityDetailDTO.getId()}" hidden/>
+                        <div id="image-error" class="alert alert-danger d-none"></div>
+                        <div id="image-preview-container">
+                            <div class="image-preview mb-3">
+                                <h6 class="text-center font-weight-bold">Preview</h6>
+                                <img id="image"
+                                     th:order-image="${activityDetailDTO.images.size() != 0}?1:-1"
+                                     th:image-id="${activityDetailDTO.images.size() != 0}?${activityDetailDTO.images.get(0)}:-1"
+                                     th:src="${activityDetailDTO.images.size()!=0}?@{/api/image/}+${activityDetailDTO.images.get(0)}:@{/static/images/no-img.png}"
+                                     alt=""/>
+                                <div id="image-name"></div>
+                            </div>
+                        </div>
+
+                        <div class="dropzone-wrapper d-flex justify-content-center align-items-center">
+                            <div class="dropzone-desc">
+                                <i class="fa fa-cloud-upload fa-3x"></i>
+                                <div>Choose an image file or drag it here.</div>
+                            </div>
+                            <input type="file" name="img_logo" class="dropzone"
+                                   id="upload-image"
+                                   aria-describedby="inputGroupFileAddon01" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div id="save-and-cancel-container" class="modal-footer">
+                        <input id="btn-submit" type="submit" class="btn btn-success" value="Upload"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</th:block>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="master.xml" relativeToChangelogFile="true"/>
+    <include file="testdata/user_test.sql" relativeToChangelogFile="true"/>
+    <include file="testdata/activity_large_test.sql" relativeToChangelogFile="true"/>
+    <include file="testdata/rating_large_test.sql" relativeToChangelogFile="true"/>
+    <include file="testdata/image_large_test.xml" relativeToChangelogFile="true"/>
+    <include file="testdata/activity_image_large_test.sql" relativeToChangelogFile="true"/>
+    <include file="testdata/comment_large_test.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

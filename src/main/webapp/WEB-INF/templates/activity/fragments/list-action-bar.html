@@ -1,0 +1,28 @@
+<th:block xmlns:th="www.thymeLeaf.org" th:fragment="list-action-bar">
+    <div class="list-action-bar">
+        <div class="list-action-buttons">
+            <button class="list-action-bar-item filter-show-btn" type="button" data-toggle="collapse"
+                    data-target="#collapseFilter"
+                    aria-expanded="false" aria-controls="collapseFilter">
+                <i class="fa fa-filter d-inline-block"></i>
+                <span class="d-none d-sm-inline-block">Filter</span>
+            </button>
+            <select name="sortType" id="sortType" class="custom-select custom-select-sm sort-select">
+                <option th:selected="${sortType=='NEWEST_FIRST'}" value="NEWEST_FIRST">Newest first</option>
+                <option th:selected="${sortType=='ACTIVE_FIRST'}" value="ACTIVE_FIRST">Most active first</option>
+                <option th:selected="${sortType=='RATING_FIRST'}" value="RATING_FIRST">Best rating first</option>
+            </select>
+        </div>
+        <div class="collapse filter-collapse" id="collapseFilter">
+            <div class="d-flex">
+                <div class="form-group flex-fill mb-0">
+                    <div class="filter-tag-box tag-box form-control" placeholder="Enter allowed tags">
+                        <div class="auto-complete tag-box-input" id="tag-ac"></div>
+                    </div>
+                </div>
+                <button type="button" class="filter-apply-btn btn btn-success ml-1"><i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</th:block>

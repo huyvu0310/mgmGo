@@ -1,0 +1,55 @@
+.tag-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: text;
+    height: auto;
+}
+
+.tag-box-display-only {
+    cursor: inherit;
+}
+
+.tag-box-focused {
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+}
+
+.tag-box-disabled, .tag-box-disabled input {
+    background-color: #e9ecef;
+    cursor: default;
+}
+
+.tag-box-element {
+    padding: 0px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+    background: #1d76bb;
+    font-size: 0.9em;
+    color: #fff;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+@media (hover: hover) {
+    .tag-box-element:hover {
+        text-decoration: line-through;
+        cursor: pointer;
+    }
+}
+
+.tag-box-display-only .tag-box-element {
+    cursor: inherit;
+    text-decoration: none;
+}
+
+.tag-box-input {
+    flex: 1 0 150px;
+}
+
+.tag-box input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}

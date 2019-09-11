@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <head>
+        <th:block th:replace="fragments/head"></th:block>
+        <title layout:title-pattern="$CONTENT_TITLE">mgm go</title>
+    </head>
+
+    <body>
+        <!-- Header, navbar,...-->
+        <header th:replace="fragments/header :: header">This header content is going to be replaced.</header>
+
+        <!-- main content -->
+        <div layout:fragment="main-content" class="content-wrapper container py-2"></div>
+
+        <!-- Message when create successfull default-layout-->
+        <th:block th:if="${successCrud != null}">
+            <div id="message-success-crud" class="alert-success alert create-message-success"
+                 th:text="${successCrud}"></div>
+        </th:block>
+
+        <div id="message-success"></div>
+
+        <div th:if="${#httpServletRequest.requestURI != ('/activity/create') && !(#httpServletRequest.requestURI.matches('/login.*'))}">
+            <a class="floating-action-button d-sm-none d-flex position-fixed" th:href="@{/activity/create}">
+                <i class="fa fa-plus fa-2x">
+                </i>
+            </a>
+        </div>
+
+        <!-- footer -->
+        <footer th:replace="fragments/footer :: footer" class="footer"></footer>
+
+        <!-- default script (bootstrap, jquery) -->
+        <th:block th:replace="fragments/script"></th:block>
+
+        <!-- your custom script -->
+        <th:block layout:fragment="custom-script"></th:block>
+    </body>
+
+</html>

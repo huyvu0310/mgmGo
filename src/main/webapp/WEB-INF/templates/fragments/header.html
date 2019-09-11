@@ -1,0 +1,77 @@
+<header id="header_area" xmlns:th="www.thymeLeaf.org" th:fragment="header" class="sticky-top"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="/"><img src="/static/images/mgm-go-logo.png" class="logo_img"
+                                                         alt="mgm-go"></a>
+            <div class="navbar-header">
+                <button class="navbar-toggler border-0 btn-toggle" id='btnSearch' type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContentSearch">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button class="navbar-toggler border-0 btn-toggle" id='btn-toggle' type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <a sec:authorize="!isAuthenticated()" th:href="@{/login}" class="user-profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <img sec:authorize="isAuthenticated()" class="img-thumbnail profile-img" width="35" height="35"
+                         th:src="${#authentication.principal.userProfileDTO.imageId!=null}?@{/api/image/}+${#authentication.principal.userProfileDTO.imageId}:@{/static/images/default_profile_picture.png}"
+                         th:alt="${#authentication.principal.userProfileDTO.displayName}">
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContentSearch">
+                <ul class="nav navbar-nav">
+                    <form th:action="@{/search}" method="get" class="nav navbar-nav align-content-center">
+                        <div class="input-group my-2 my-lg-block">
+                            <input type="text" class="form-control "
+                                   id="searchInfor"
+                                   name="searchInfor"
+                                   placeholder="Search for activities" th:value="${keySearch} ? ${keySearch} : ''">
+                            <span class="input-group-append inside d-none d-lg-block">
+                                 <button class="btn btn-outline-none" type="submit" id="search">
+                                     <i class="fa fa-search"></i>
+                                 </button>
+                            </span>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                <ul class="nav navbar-nav menu_nav ml-auto">
+                    <li class="nav-item profile-desktop">
+                        <a class="nav-link" th:href="@{/activity/create}" th:text="'New activity'"
+                           sec:authorize="!isAuthenticated()">New activity</a>
+                        <a class="nav-link mt-1" th:href="@{/activity/create}" th:text="'New activity'"
+                           sec:authorize="isAuthenticated()">New activity</a>
+                    </li>
+                    <li class="nav-item profile-desktop">
+                        <a class="nav-link" th:href="@{/login}" th:text="Login" sec:authorize="!isAuthenticated()"></a>
+                        <div class="nav-link dropdown " sec:authorize="isAuthenticated()">
+                            <a class="dropdown-toggle" id="user_dropdown" data-toggle="dropdown"
+                               href="#">
+                                <img id="user-thumbnail" class="img-thumbnail" width="35" height="35"
+                                     th:src="${#authentication.principal.userProfileDTO.imageId!=null}?@{/api/image/}+${#authentication.principal.userProfileDTO.imageId}:@{/static/images/default_profile_picture.png}"
+                                     th:alt="${#authentication.principal.userProfileDTO.displayName}">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user_dropdown">
+                                <a th:href="@{/profile/userprofile}" class="dropdown-item">My profile</a>
+                                <a th:href="@{/logout}" class="dropdown-item">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item profile-mobile">
+                        <div sec:authorize="isAuthenticated()" class="nav-link dropdown menu-list">
+                            <a th:href="@{/profile/userprofile}">My profile</a>
+                            <a th:href="@{/logout}">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

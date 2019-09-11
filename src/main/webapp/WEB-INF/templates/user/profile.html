@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title>mgm go</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/user/profile.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/croppie.css}"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta type="text" name="csrf-token" th:content="${_csrf!=null?_csrf.token:''}"/>
+    <meta type="text" name="csrf-header" th:content="${_csrf!=null?_csrf.headerName:'X-CSRF-Token'}"/>
+</head>
+<body>
+
+<div layout:fragment="main-content">
+    <div class="profile-nav">
+        <th:block th:replace="user/fragments/nav-profile"></th:block>
+    </div>
+    <div id="profile-container" class="col-12 row mx-auto">
+        <div>
+            <div id="picture-container">
+                <img th:src="${userProfileDTO.getImageId()!=null}?@{/api/image/}+${userProfileDTO.getImageId()}:@{/static/images/default_profile_picture.png}"
+                     id="profile-picture" class="img-thumbnail rounded mx-auto" alt="Profile picture"/>
+                <label for="file-input" class="fa fa-camera"></label>
+                <input type="file" id="file-input" accept="image/x-png,image/jpeg" hidden>
+            </div>
+            <p class="d-flex align-items-center justify-content-center">
+                <span id="reputation-score" th:text="${userProfileDTO.reputationScore}"></span>
+                <span id="reputation-score-text" class="text-primary ml-1"> REPUTATION</span>
+            </p>
+        </div>
+        <form method="POST" id="profile-form" class="col-12 col-lg-6" th:action="@{/profile/userprofile}"
+              th:object="${userProfileDTO}">
+            <div th:if="${success!=null}" class="alert alert-success" th:text="${success}"></div>
+            <div class="alert alert-danger" th:if="${error!=null}" th:text="${error}"></div>
+            <div class="form-group row">
+                <label class="col-12" for="username">Username:</label>
+                <div class="col-12 px-0">
+                    <input type="text" class="form-control" id="username" th:value="${username}" readonly/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-12" for="displayName">Display name:</label>
+                <div class="col-12 px-0">
+                    <input th:class="'form-control'+${#fields.hasErrors('displayName')?' is-invalid':''}"
+                           type="text"
+                           name="displayName" id="displayName" th:value="*{displayName}"
+                           required>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('displayName')}"
+                         th:errors="*{displayName}"></div>
+                    <div class="invalid-feedback" th:unless="${#fields.hasErrors('displayName')}"></div>
+                </div>
+            </div>
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <button type="submit" id="info-save-btn" class="btn btn-success">Save</button>
+        </form>
+    </div>
+
+    <div class="modal" id="crop-modal" tabindex="-1" role="dialog" aria-labelledby="cropModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cropModalLabel">Upload new picture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="picture-message" class="alert alert-danger d-none"></div>
+                    <div id="crop-container"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="picture-save-btn" class="btn btn-success">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="custom-script">
+    <script th:src="@{/static/js/libraries/exif.js}"></script>
+    <script th:src="@{/static/js/libraries/croppie.js}"></script>
+    <script th:src="@{/static/js/profile.js}"></script>
+</th:block>
+</body>
+</html>

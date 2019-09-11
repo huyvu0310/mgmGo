@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeLeaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title>mgm go</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/main.css}"/>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-2" layout:fragment="sidebar">
+            <h1>Sidebar</h1>
+            <a href="#">Login</a>
+        </div>
+        <div class="col" layout:fragment="content">
+            <h1>Welcome to the Index page</h1>
+            <br>This content is replacing the content of the layout:fragment="content"<br>
+            placeholder in layout.html
+        </div>
+
+    </div>
+</div>
+
+<th:block layout:fragment="custom-script">
+    <script src="/static/js/index.js"></script>
+</th:block>
+</body>
+</html>

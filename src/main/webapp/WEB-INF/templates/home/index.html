@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeLeaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title>mgm go</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/home/index.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/auto-complete.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/tags.css}"/>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <h5 class="display-4 d-none d-lg-block">Welcome to mgm go!</h5>
+    <hr class="my-4 display-4 d-none d-lg-block">
+    <p>You can find events, places and anything in here.</p>
+    <div th:replace="activity/fragments/list-action-bar"></div>
+    <div class="lazy-loading activities"
+         th:attr="current-page=${pagingInfo.currentPage},size-of-pages=${pagingInfo.sizeOfPages},link=@{/more/?sortType={sortType}(sortType=${sortType})}">
+        <th:block th:replace="activity/fragments/list-activities"></th:block>
+    </div>
+    <button th:if="${not #lists.isEmpty(activities) and pagingInfo.currentPage lt pagingInfo.sizeOfPages}" type="button"
+            id="see-more"
+            class="btn col-12">See more
+    </button>
+    <div class="col-12 text-center py-3 d-none btn-loading">
+        <span class="spinner-border spinner-border-sm loading text-secondary" role="status" aria-hidden="true"></span>
+    </div>
+</div>
+<th:block layout:fragment="custom-script">
+    <script type="text/javascript" src="/static/js/lazy-loading.js"></script>
+    <script src="/static/js/auto-complete.js"></script>
+    <script src="/static/js/tags.js"></script>
+    <script type="text/javascript" src="/static/js/list-action.js"></script>
+</th:block>
+</body>
+</html>

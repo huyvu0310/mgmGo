@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Mgm GO Styleguide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/main/webapp/static/css/main.css">
+</head>
+<body style="background-color: #eee;">
+<div class="tab-content head sticky-top  border-left-0 border-right-0 border-top-0" id="nav-tabContent">
+    <nav class="container p-0">
+        <div class="nav nav-tabs option border-bottom-0" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link mr-2 ml-0 d-flex align-items-center  active " id="nav-guide-tab" data-toggle="tab" href="#nav-guide" role="tab" aria-controls="nav-guide" aria-selected="true"><img src="style guide.png" class="imgFixed"></a>
+            <a class="nav-item nav-link mx-2 d-flex align-items-center" id="nav-font-tab" data-toggle="tab" href="#nav-font" role="tab" aria-controls="nav-font" aria-selected="false"><h3 class="mb-0">Font</h3></a>
+            <a class="nav-item nav-link mx-2 d-flex align-items-center" id="nav-color-tab" data-toggle="tab" href="#nav-color" role="tab" aria-controls="nav-color" aria-selected="false"><h3 class="mb-0">Color</h3></a>
+            <a class="nav-item nav-link mx-2 d-flex align-items-center" id="nav-icon-tab" data-toggle="tab" href="#nav-icon" role="tab" aria-controls="nav-icon" aria-selected="false"><h3 class="mb-0">Icon</h3></a>
+            <a class="nav-item nav-link mx-2 d-flex align-items-center" id="nav-us-tab" data-toggle="tab" href="#nav-us" role="tab" aria-controls="nav-us" aria-selected="false"><h3 class="mb-0">Usability standard</h3></a>
+        </div>
+    </nav>
+</div>
+<div class="container shadow    " style="background-color: #ffffff;">
+    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+        <div class="tab-pane fade  active show" id="nav-guide" role="tabpanel" aria-labelledby="nav-guide-tab">
+            <h2>Welcome to the Styleguide</h2>
+            <p> This document provides guidance for the creation
+                and design of web pages, components, and interface
+                elements to ensure that our public web sites maintain a
+                consistent look, feel, and branding.
+                We will focus on the visual design of web page
+                elements.
+            </p>
+        </div>
+        <div class="tab-pane fade" id="nav-font" role="tabpanel" aria-labelledby="nav-font-tab">
+            <!--                    <p>Font here</p>-->
+            <div class="boxFontInfo">
+                <div class="text-muted">
+                    <h3 style="margin-left: 0.5em;">Headings</h3>
+                </div>
+                <div style="padding: 1em">
+                    <p>Heading tags are design from &lth1&gt to &lth6&gt<br>
+                        In heading tag &lth1&gt is the largest size while &lth6&gt is the smallest size.</p>
+                    <table>
+                        <tr>
+                            <th><h3>Heading</h3></th>
+                            <th><h3>Example</h3></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="color: #2f6f9f">&lth1 </span>
+                                <span style="color: #2f6f9f">&gt</span>
+                                <span style="color: #2f6f9f">&lt/h1&gt</span>
+                            </td>
+                            <td><h1>This is a example for heading level 1</h1></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="color: #2f6f9f">&lth2 </span>
+                                <span style="color: #2f6f9f">&gt</span>
+                                <span style="color: #2f6f9f">&lt/h2&gt</span>
+                            </td>
+                            <td><h2>This is a example for heading level 2</h2></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="color: #2f6f9f">&lth3 </span>
+                                <span style="color: #2f6f9f">&gt</span>
+                                <span style="color: #2f6f9f">&lt/h3&gt</span>
+                            </td>
+                            <td><h3>This is a example for heading level 3</h3></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="color: #2f6f9f">&lth4 </span>
+                                <span style="color: #2f6f9f">&gt</span>
+                                <span style="color: #2f6f9f">&lt/h4&gt</span>
+                            </td>
+                            <td><h4>This is a example for heading level 4</h4></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="color: #2f6f9f">&lth5 </span>
+                                <span style="color: #2f6f9f">&gt</span>
+                                <span style="color: #2f6f9f">&lt/h5&gt</span>
+                            </td>
+                            <td><h5>This is a example for heading level 5</h5></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="color: #2f6f9f">&lth6 </span>
+                                <span style="color: #2f6f9f">&gt</span>
+                                <span style="color: #2f6f9f">&lt/h6&gt</span>
+                            </td>
+                            <td><h6>This is a example for heading level 6</h6></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="text-muted">
+                    <h3>Font weight and italics</h3>
+                </div>
+                <div>
+                    <p>Quickly change the weight (boldness) of text or italicize text</p>
+                    <div class="boxExample">
+                        <p class="font-weight-bold">Bold text.</p>
+                        <p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
+                        <p class="font-weight-normal">Normal weight text.</p>
+                        <p class="font-weight-light">Light weight text.</p>
+                        <p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
+                        <p class="font-italic">Italic text.</p>
+                    </div>
+
+                    <div class="card shadow-sm my-3">
+                        <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                        <div>
+                                    <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-weight-bold<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bold text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-weight-bolder<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bolder weight text (relative to the parent element). <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-weight-normal<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Normal weight text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-weight-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light weight text. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-weight-lighter<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Lighter weight text (relative to the parent element). <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-italic<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Italic text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                    </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container pt-3">
+                <div class="text-muted">
+                    <h3>Display headings</h3>
+                </div>
+                <div>
+                    <p>Bootstrap 4 introduces display headings that can be used when you need a heading to stand out. <br>Display headings are displayed in larger font-size but lighter font-weight.</p>
+                    <div class="boxExample">
+                        <h1 class="display-1">Display 1</h1>
+                        <h1 class="display-2">Display 2</h1>
+                        <h1 class="display-3">Display 3</h1>
+                        <h1 class="display-4">Display 4</h1>
+                    </div>
+                    <div class="card shadow-sm my-3">
+                        <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                        <div>
+                                    <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>display-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display-1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>display-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display-2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>display-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display-3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>display-4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                    </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container pt-3">
+                <div class="text-muted">
+                    <h3 class='pb-3'style="margin-left: 0.5em;">Font family</h3>
+                </div>
+                <div class="section-preview shadow-sm">
+                    <p style="font-family: Open-Sans">This is Open-Sans font</p>
+                    <p style="font-family: Arial">This is Arial font.</p>
+                    <p style="font-family: Arial">This is sans-serif font.</p>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-family: Open-Sans<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is Open-Sans font<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-family: Arial<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is Arial font.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-family: Arial<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is sans-serif font.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-color" role="tabpanel" aria-labelledby="nav-color-tab">
+            <div class="colorElement">
+                <h2 class="text-muted">Background color</h2>
+                <div class="colorInfo2">
+                    <div class="p-3 mb-2 bg-primary text-white colorChoose">.bg-primary</div>
+                    <div class="p-3 mb-2 bg-secondary text-white colorChoose">.bg-secondary</div>
+                    <div class="p-3 mb-2 bg-success text-white colorChoose">.bg-success</div>
+                    <div class="p-3 mb-2 bg-danger text-white colorChoose">.bg-danger</div>
+                    <div class="p-3 mb-2 bg-warning text-dark colorChoose">.bg-warning</div>
+                    <div class="p-3 mb-2 bg-info text-white colorChoose">.bg-info</div>
+                    <div class="p-3 mb-2 bg-light text-dark colorChoose">.bg-light</div>
+                    <div class="p-3 mb-2 bg-dark text-white colorChoose">.bg-dark</div>
+                    <div class="p-3 mb-2 bg-white text-dark colorChoose">.bg-white</div>
+                    <div class="p-3 mb-2 bg-transparent text-dark colorChoose">.bg-transparent</div>
+                </div>
+            </div>
+            <div class="colorElement">
+                <h2 class="text-muted">Text color</h2>
+                <div class="colorInfo2">
+                    <p class="text-primary">.text-primary</p>
+                    <p class="text-secondary">.text-secondary</p>
+                    <p class="text-success">.text-success</p>
+                    <p class="text-danger">.text-danger</p>
+                    <p class="text-warning">.text-warning</p>
+                    <p class="text-info">.text-info</p>
+                    <p class="text-light bg-dark">.text-light</p>
+                    <p class="text-dark">.text-dark</p>
+                    <p class="text-body">.text-body</p>
+                    <p class="text-muted">.text-muted</p>
+                    <p class="text-white bg-dark">.text-white</p>
+                    <p class="text-black-50">.text-black-50</p>
+                    <p class="text-white-50 bg-dark">.text-white-50</p>
+                </div>
+            </div>
+            <div class="colorElement">
+                <h2 class="text-muted">Optional color</h2>
+                <div class="container" style="text-align: center">
+                    <div class="row">
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor bg-danger"></div>
+                            <div>
+                                <p>#dc3545<br>rgb(220, 53, 69)<br>hsl(354, 70%, 54%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #fd7e14"></div>
+                            <div>
+                                <p>#fd7e14<br>rgb(253, 126, 20)<br>hsl(27, 98%, 54%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #fbbe0a"></div>
+                            <div>
+                                <p>#fbbe0a<br>rgb(251, 190, 10)<br>hsl(45, 97%, 51%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="text-align: center">
+                    <div class="row">
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #1d76bb"></div>
+                            <div>
+                                <p>#1d76bb<br>rgb(29, 118, 187)<br>hsl(206, 73%, 42%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #6610f2"></div>
+                            <div>
+                                <p>#6610f2<br>rgb(102, 16, 242)<br>hsl(263, 90%, 51%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #6f42c1"></div>
+                            <div>
+                                <p>#6f42c1<br>rgb(111, 66, 193)<br>hsl(261, 51%, 51%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="text-align: center">
+                    <div class="row">
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #28a745"></div>
+                            <div>
+                                <p>#28a745<br>rgb(40, 167, 69)<br>hsl(134, 61%, 41%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #20c997"></div>
+                            <div>
+                                <p>#20c997<br>rgb(32, 201, 151)<br>hsl(210, 11%, 15%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #17a2b8"></div>
+                            <div>
+                                <p>#17a2b8<br>rgb(23, 162, 184)<br>hsl(188, 78%, 41%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="text-align: center">
+                    <div class="row">
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #343a40"></div>
+                            <div>
+                                <p>#343a40<br>rgb(52, 58, 64)<br>hsl(210, 10%, 23%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #6c757d"></div>
+                            <div>
+                                <p>#6c757d<br>rgb(108, 117, 125)<br>hsl(208, 7%, 46%)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm boxColorInfo">
+                            <div class="boxColor" style="background: #f8f9fa"></div>
+                            <div>
+                                <p>#f8f9fa<br>rgb(248, 249, 250)<br>hsl(210, 17%, 98%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="nav-icon" role="tabpanel" aria-labelledby="nav-icon-tab">
+            <div class="container py-4">
+                <h3 class="text-muted pb-3">Basic Usages</h3>
+                <p>We use a powerful set of icons called Font Awesome.</p>
+                <p>You can place Font Awesome icons just about anywhere using the CSS Prefix <span class='text-danger'>fa</span> and
+                    the icon's name. Font Awesome is designed to be used with inline elements.</p>
+                <!-- basic usage -->
+                <div class="container section-preview shadow-sm">
+                    <div class="row">
+                        <div class="col-sm">
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-facebook-square my-icon mx-3"></i>
+                                    fa-facebook-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-twitter-square my-icon mx-3"></i>
+                                    fa-twitter-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-youtube-square my-icon mx-3"></i>
+                                    fa-youtube-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-youtube my-icon mx-3"></i>
+                                    fa-youtube
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-youtube-play my-icon mx-3"></i>
+                                    fa-youtube-play
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-google-plus-square my-icon mx-3"></i>
+                                    fa-google-plus-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-google my-icon mx-3"></i>
+                                    fa-google
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-github-square my-icon mx-3"></i>
+                                    fa-github-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-github my-icon mx-3"></i>
+                                    fa-github
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-github-alt my-icon mx-3"></i>
+                                    fa-github-alt
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-git-square my-icon mx-3"></i>
+                                    fa-git-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-git my-icon mx-3"></i>
+                                    fa-git
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-linkedin-square my-icon mx-3"></i>
+                                    fa-linkedin-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-linkedin my-icon mx-3"></i>
+                                    fa-linkedin
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-skype my-icon mx-3"></i>
+                                    fa-skype
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-chrome my-icon mx-3"></i>
+                                    fa-chrome
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-safari my-icon mx-3"></i>
+                                    fa-safari
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-firefox my-icon mx-3"></i>
+                                    fa-firefox
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-opera my-icon mx-3"></i>
+                                    fa-opera
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-internet-explorer my-icon mx-3"></i>
+                                    fa-internet-explorer
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-user my-icon mx-3"></i>
+                                    fa-user
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-user-plus my-icon mx-3"></i>
+                                    fa-user-plus
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-user-times my-icon mx-3"></i>
+                                    fa-user-times
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-phone my-icon mx-3"></i>
+                                    fa-phone
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-phone-square my-icon mx-3"></i>
+                                    fa-phone-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-microphone my-icon mx-3"></i>
+                                    fa-microphone
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-microphone-slash my-icon mx-3"></i>
+                                    fa-microphone-slash
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-headphones my-icon mx-3"></i>
+                                    fa-headphones
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-envelope my-icon mx-3"></i>
+                                    fa-envelope
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-envelope-square my-icon mx-3"></i>
+                                    fa-envelope-square
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-envelope-o my-icon mx-3"></i>
+                                    fa-envelope-o
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-undo my-icon mx-3"></i>
+                                    fa-undo
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-quote-left my-icon mx-3"></i>
+                                    fa-quote-left
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-quote-right my-icon mx-3"></i>
+                                    fa-quote-right
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-key my-icon mx-3"></i>
+                                    fa-key
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-download my-icon mx-3"></i>
+                                    fa-download
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-upload my-icon mx-3"></i>
+                                    fa-upload
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-star my-icon mx-3"></i>
+                                    fa-star
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-star-o my-icon mx-3"></i>
+                                    fa-star-o
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-circle-down my-icon mx-3"></i>
+                                    fa-arrow-circle-down
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-circle-up my-icon mx-3"></i>
+                                    fa-arrow-circle-up
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-circle-right my-icon mx-3"></i>
+                                    fa-arrow-circle-right
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-circle-left my-icon mx-3"></i>
+                                    fa-arrow-circle-left
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-camera my-icon mx-3"></i>
+                                    fa-camera
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-database my-icon mx-3"></i>
+                                    fa-database
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-left my-icon mx-3"></i>
+                                    fa-arrow-left
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-right my-icon mx-3"></i>
+                                    fa-arrow-right
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-up my-icon mx-3"></i>
+                                    fa-arrow-up
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-arrow-down my-icon mx-3"></i>
+                                    fa-arrow-down
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-code my-icon mx-3"></i>
+                                    fa-code
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-search my-icon mx-3"></i>
+                                    fa-search
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-tag my-icon mx-3"></i>
+                                    fa-tag
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-tags my-icon mx-3"></i>
+                                    fa-tags
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-bookmark my-icon mx-3"></i>
+                                    fa-bookmark
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-check my-icon mx-3"></i>
+                                    fa-check
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-times my-icon mx-3"></i>
+                                    fa-times
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-home my-icon mx-3"></i>
+                                    fa-home
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-cog my-icon mx-3"></i>
+                                    fa-cog
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-trash my-icon mx-3"></i>
+                                    fa-trash
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-clock-o my-icon mx-3"></i>
+                                    fa-clock-o
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-th my-icon mx-3"></i>
+                                    fa-th
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-th-list my-icon mx-3"></i>
+                                    fa-th-list
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-share my-icon mx-3"></i>
+                                    fa-share
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-plus my-icon mx-3"></i>
+                                    fa-plus
+                                </li>
+                                <li class="d-flex align-items-center my-2">
+                                    <i class="fa fa-minus my-icon mx-3"></i>
+                                    fa-minus
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-facebook-square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-facebook-square<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-twitter-square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-twitter-square<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-youtube-square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-youtube-square<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-youtube<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-youtube<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-youtube-play<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-youtube-play<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+  ....
+                                </pre>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!-- basic usage -->
+
+                <!-- icons size -->
+                <h3 class="text-muted pb-3">Sizes</h3>
+                <p>To increase icon sizes relative to their container, uses <span class='text-danger'>fa-2x, fa-3x, fa-4x,
+                                fa-5x.</span></p>
+                <p>If you want to custom you size of icons, just using <span class='text-danger'>font-size</span> attribute.</p>
+                <div class="container section-preview shadow-sm">
+                    <li class="d-flex align-items-center my-3">
+                        <i class="fa fa-university mx-3"></i>
+                        <span>fa-university</span>
+                    </li>
+                    <li class="d-flex align-items-center my-3">
+                        <i class="fa fa-university mx-3 fa-2x"></i>
+                        <span>fa-university fa-2x</span>
+                    </li>
+                    <li class="d-flex align-items-center my-3">
+                        <i class="fa fa-university mx-3 fa-3x"></i>
+                        <span>fa-university fa-3x</span>
+                    </li>
+                    <li class="d-flex align-items-center my-3">
+                        <i class="fa fa-university mx-3 fa-4x"></i>
+                        <span>fa-university fa-4x</span>
+                    </li>
+                    <li class="d-flex align-items-center my-3">
+                        <i class="fa fa-university mx-3 fa-5x"></i>
+                        <span>fa-university fa-5x</span>
+                    </li>
+                    <li class="d-flex align-items-center my-3">
+                        <i class="fa fa-university mx-3" style="font-size: 40px"></i>
+                        <span>fa-university 40px</span>
+                    </li>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-university<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-university<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-university fa-2x<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-university fa-2x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-university fa-3x<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-university fa-3x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-university fa-4x<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-university fa-4x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-university fa-5x<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-university fa-5x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-university<span class="token punctuation">"</span></span><span class="token attr-name"> style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-size: 40px<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-university 40px<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                </pre>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!--icons sizes -->
+
+                <!-- Color icons-->
+                <h3 class="text-muted pb-3">Colors</h3>
+                <p>You can choose colors in icon. It's using <span class='text-danger'>color</span> attribute.</p>
+                <div class="section-preview">
+                    <p class="d-flex align-items-center"><i class="fa fa-bolt fa-3x text-warning pr-3" aria-hidden="true"></i>
+                        text-warning</p>
+                    <p class="d-flex align-items-center"><i class="fa fa-bug fa-3x text-success pr-3" aria-hidden="true"></i>
+                        text-success</p>
+                    <p class="d-flex align-items-center"><i class="fa fa-heart fa-3x text-info pr-3" aria-hidden="true"></i> text-info
+                    </p>
+                    <p class="d-flex align-items-center"><i class="fa fa-bell fa-3x text-secondary pr-3" aria-hidden="true"></i>
+                        text-secondary</p>
+                    <p class="d-flex align-items-center"><i class="fa fa-birthday-cake fa-3x text-primary pr-3"
+                                                            aria-hidden="true"></i> text-primary</p>
+                    <p class="d-flex align-items-center"><i class="fa fa-camera fa-3x pr-3" aria-hidden="true" style="color: red"></i>
+                        color red</p>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-bolt text-warning<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> text-warning<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-bug text-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> text-success<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-heart text-info<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> text-info<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-bell text-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> text-secondary<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-birthday-cake text-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> text-primary<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-camera<span class="token punctuation">"</span></span><span class="token attr-name"> style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>color: red<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> fa-camera color red<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                </pre>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!-- Color icons-->
+
+                <!--icon in list -->
+                <h3 class="text-muted pb-3">List</h3>
+                <p>You can use icon in list.</p>
+                <div class="section-preview">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa fa-check-square"></i></span>List icons can</li>
+                        <li><span class="fa-li"><i class="fa fa-check-square"></i></span>be used to</li>
+                        <li><span class="fa-li"><i class="fa fa-spinner fa-pulse"></i></span>replace bullets</li>
+                        <li><span class="fa-li"><i class="fa fa-square"></i></span>in lists</li>
+                    </ul>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa-ul<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code>
+<code class="language-html"><span class="ml-3 token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-check-square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> List icons can<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="ml-3 token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-check-square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> be used to<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="ml-3 token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-spinner fa-pulse<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> replace bullets<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="ml-3 token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> in lists<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                </pre>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!--icon in list-->
+
+                <!-- rotate icons-->
+                <h3 class="text-muted pb-3">Rotating icons</h3>
+                <p>You can rotate icons with classes.</p>
+                <div class="fa-3x text-primary section-preview">
+                    <i class="fa fa-diamond"></i>
+                    <i class="fa fa-diamond fa-rotate-90"></i>
+                    <i class="fa fa-diamond fa-rotate-180"></i>
+                    <i class="fa fa-diamond fa-rotate-270"></i>
+                    <i class="fa fa-diamond fa-flip-horizontal"></i>
+                    <i class="fa fa-diamond fa-flip-vertical"></i>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-diamond<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-diamond fa-rotate-90<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-diamond fa-rotate-180<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-diamond fa-rotate-270<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-diamond fa-flip-horizontal<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-diamond fa-flip-vertical<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+
+                                </pre>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!-- rotate icons-->
+
+                <!-- animation icons-->
+                <h3 class="text-muted pb-3">Animating icons</h3>
+                <p>You can animate your icons.</p>
+                <div class="fa-3x section-preview">
+                    <i class="fa fa-camera fa-spin"></i>
+                    <i class="fa fa-spinner fa-spin"></i>
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <i class="fa fa-sync fa-spin"></i>
+                    <i class="fa fa-cog fa-spin"></i>
+                    <i class="fa fa-spinner fa-pulse"></i>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-camera fa-spin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-spinner fa-spin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-refresh fa-spin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-sync fa-spin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-cog fa-spin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-spinner fa-pulse<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                </pre>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!-- animation icons-->
+
+                <!-- button icons-->
+                <h3 class="text-muted pb-3">Button icons</h3>
+                <p>You can use icons in your buttons. </p>
+                <div class="section-preview">
+                    <a class="btn btn-primary" role="button"><i class="fa fa-bolt"></i></a>
+                    <button type="button" class="btn btn-info btn-lg">
+                        Button
+                        <i class="fa fa-heart ml-2" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa fa-apple mr-2"
+                                                                             aria-hidden="true"></i>Button</button>
+                    <button type="button" class="btn btn-danger">Button<i class="fa fa-thumbs-up ml-2"
+                                                                          aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-warning"><i class="fa fa-user mr-2" aria-hidden="true"></i>Button</button>
+                </div>
+                <div class="card shadow-sm my-3">
+                    <h4 class="card-header bg-white"> <span class="badge badge-secondary">HTML</span></h4>
+                    <div>
+                                <pre class="bg-code text-info pl-5 mb-0">
+
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-bolt<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-info btn-lg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="language-html">Button</span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-heart ml-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-outline-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-apple mr-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></span><span class="language-html">Button</span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="language-html">Button</span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-thumbs-up ml-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+<code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-warning<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="language-html">Button</span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-user mr-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></span><span class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                                </pre>
+                    </div>
+                </div>
+                <!-- button icons-->
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-us" role="tabpanel" aria-labelledby="nav-us-tab">
+
+            <div class="container pt-4">
+                <h5 class='pb-3'>We have some usability standards for our website.</h5>
+                <!-- Button -->
+                <h3 class="text-muted">Button</h3>
+                <p>We have some common standards for buttons:</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <p></p>
+                    </li>
+                    <li>
+                        <p>- <span class='font-weight-bold'>Positive</span> buttons (OK, Agree, Continue, Yes, Submit, Save,...) have
+                            green color (success color in bootstrap) and on the left side.</p>
+                    </li>
+                    <li>
+                        <p>- <span class='font-weight-bold'>Negative</span> buttons (No, Cancel, Abort,...) have white color and on the right side.</p>
+                    </li>
+                    <li>
+                        <p>- <span class='font-weight-bold'>Destructive</span> buttons (Delete, Discard, Reject, Block,...) have red
+                            color (danger color in bootstrap) and on the left side. </p>
+                    </li>
+                    <li>
+                        <p>- <span class='font-weight-bold'>Information</span> buttons (Learn more, See detail,...) have blue color
+                            and on the left or the middle side.</p>
+                    </li>
+                </ul>
+                <div class="section-preview shadow-sm">
+                    <div class="row my-2 px-3">
+                        <button class='btn btn-success mx-1'>OK</button>
+                        <button class='btn btn-success mx-1'>Agree</button>
+                        <button class='btn btn-success mx-1'>Continue</button>
+                        <button class='btn btn-success mx-1'>Accept</button>
+                        <button class='btn btn-success mx-1'>Submit</button>
+                        <button class='btn btn-success mx-1'>Save</button>
+                    </div>
+                    <div class="row my-2 px-3 ">
+                        <button class='btn btn-negative mx-1'>No</button>
+                        <button class='btn btn-negative mx-1'>Cancel</button>
+                        <button class='btn btn-negative mx-1'>Abort</button>
+                    </div>
+                    <div class="row my-2 px-3">
+                        <button class='btn btn-danger mx-1'>Delete</button>
+                        <button class='btn btn-danger mx-1'>Discard</button>
+                        <button class='btn btn-danger mx-1'>Reject</button>
+                        <button class='btn btn-danger mx-1'>Block</button>
+                    </div>
+                    <div class="row my-2 px-3">
+                        <button class='btn btn-info mx-1'>Learn more</button>
+                        <button class='btn btn-info mx-1'>See detail</button>
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!-- end-button -->
+
+                <!-- Floating action button -->
+                <h3 class="text-muted">Floating action button</h3>
+                <p>A floating action button (FAB) performs the primary, or most common, action on a screen</p>
+                <ul class="list-unstyled">
+                    <li><p>- It appears in front of all screen content, typically as a circular shape with an icon in its center.</p></li>
+                    <li><p>- FABs come in three types: regular, mini, and extended.</p></li>
+                    <li><p>- Only use a FAB if it is the most suitable way to present a screen’s primary action.</p></li>
+                </ul>
+                <div class="section-preview shadow-sm">
+                    <a class="floating-action-button d-flex position-static">
+                        <i class="fa fa-plus fa-2x">
+                        </i>
+                    </a>
+                </div>
+                <hr class="mt-5" />
+                <!-- end floating action button -->
+
+                <!-- table -->
+                <h3 class="text-muted pt-3">Tables</h3>
+                <p>With table, we have some standards:</p>
+                <ul class='list-unstyled'>
+                    <li>
+                        <p>- No vertical border</p>
+                    </li>
+                    <li>
+                        <p>- horizontal border 1px</p>
+                    </li>
+                </ul>
+                <div class='section-preview shadow-sm'>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="mt-5" />
+                <!-- end-table -->
+
+                <!-- message-->
+                <h3 class="text-muted pt-3">Messages</h3>
+                <p>With message, we have some standards:</p>
+                <ul class='list-unstyled'>
+                    <li>
+                        <p>- <strong>Error message</strong> messages have red color and red background-color (danger color in bootstrap)
+                            and displayed below the field where the error occurs
+                        </p>
+                    </li>
+                    <li>
+                        <p>- <strong>Success message</strong> messages have green color and green background-color (success color in
+                            bootstrap)</p>
+                    </li>
+                    <li>
+                        <p>- <strong>Warning message</strong> messages have yellow color and yellow background-color (warning color in
+                            bootstrap)</p>
+                    </li>
+                </ul>
+                <div class="section-preview shadow-sm">
+                    <div class="alert alert-danger" role="alert">
+                        This is error message!!!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        This is success message!!!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        This is warning message!!!
+                    </div>
+                </div>
+                <hr class="mt-5" />
+                <!-- end message-->
+
+                <!-- search form -->
+                <h3 class="text-muted pt-3">Search form</h3>
+                <p>With search form, we have some standards:</p>
+                <ul class='list-unstyled'>
+                    <li>
+                        <p>- Button search has only icon search and on the right side.</p>
+                    </li>
+                    <li>
+                        <p>- Search input has placeholder (Ex: Search for places,...) and on the left side </p>
+                    </li>
+                </ul>
+                <!--form search-->
+                <div class="section-preview ">
+                    <div class="input-group ">
+                        <input type="text" class="form-control "
+                               id="searchInfor"
+                               name="searchInfor"
+                               placeholder="Search for activities">
+                        <span class="input-group-append inside">
+                              <button class="btn btn-outline-none"
+                                      type="submit" id="search">
+                                <i class="fa fa-search"></i>
+                              </button>
+                        </span>
+                    </div>
+                </div>
+                <hr class="mt-5"/>
+                <!-- end search form-->
+
+                <!-- form -->
+                <h3 class="text-muted pt-3">Form</h3>
+                <p>With form, we have some standards:</p>
+                <ul class='list-unstyled'>
+                    <li>
+                        <p>- <strong>Label</strong> is always above of input.</p>
+                    </li>
+                    <li>
+                        <p>- <strong>Text
+                            input</strong>  has placeholder (Ex: Enter your name.) </p>
+                    </li>
+                    <li>
+                        <p>- <strong>Submit button </strong>is always at the end of form</p>
+                    </li>
+                </ul>
+                <div class="section-preview shadow-sm">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                   placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- end form -->
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

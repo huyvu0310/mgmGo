@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="create_user_table" author="vhduong">
+        <createTable tableName="user" remarks="user table">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <column name="username" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="display_name" type="varchar(30)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="image_id" type="bigint">
+                <constraints foreignKeyName="fk_user_image" references="image(id)" nullable="true"/>
+            </column>
+            <column name="reputation_score" type="int" defaultValue="0">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

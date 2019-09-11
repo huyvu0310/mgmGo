@@ -1,0 +1,97 @@
+#crop-modal .modal-body {
+    min-height: 350px;
+    margin-bottom: 60px;
+}
+
+#crop-modal #crop-container {
+    height: 300px;
+}
+
+#profile-container {
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+#profile-container > .col-12, #profile-container form label {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#profile-container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#picture-container {
+    position: relative;
+    font-size: 1.4rem;
+    margin-bottom: 2em;
+    flex-shrink: 0;
+}
+
+#picture-container img {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    box-sizing: content-box;
+    width: 150px;
+    height: 150px;
+    padding: 8px;
+}
+
+#picture-container label {
+    position: absolute;
+    text-align: center;
+    line-height: 2em;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin: 0;
+    bottom: -0.8em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    background-color: #868E96;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 2px #aaaaaa;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#profile-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-container form button {
+    align-self: flex-end;
+}
+
+#reputation-score {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#reputation-score-text {
+    font-size: 12px
+}
+
+.nav-tabs .nav-link {
+    border: 2px transparent;
+}
+
+.nav.nav-tabs .nav-item:hover {
+    border-bottom: 2px solid #1d76bb;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #1d76bb;
+}
+
+.nav-item.active > a
+{
+    color: #1d76bb;
+}

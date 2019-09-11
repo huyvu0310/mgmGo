@@ -1,0 +1,18 @@
+<th:block xmlns:th="www.thymeLeaf.org" th:fragment="comment">
+    <meta charset="UTF-8">
+    <div id="total_comment">
+        <div class="lazy-loading comment" id="lazy-loading-comment"
+             th:attr="current-page=${pagingInfo.currentPage},size-of-pages=${pagingInfo.sizeOfPages},link=@{/comment/activity/{activityId}/more/(activityId=${activityId})}">
+            <th:block th:replace="activity/fragments/comment"></th:block>
+        </div>
+        <button th:if="${not #lists.isEmpty(comments) and pagingInfo.currentPage lt pagingInfo.sizeOfPages}"
+                type="button"
+                id="see-more"
+                class="btn col-12">See more
+        </button>
+        <div class="col-12 text-center py-3 d-none btn-loading">
+                <span class="spinner-border spinner-border-sm loading text-secondary" role="status"
+                      aria-hidden="true"></span>
+        </div>
+    </div>
+</th:block>

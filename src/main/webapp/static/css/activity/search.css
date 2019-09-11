@@ -1,0 +1,33 @@
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+
+.input-group #searchInfor {
+    border-radius: .25rem;
+    font-size: 100%;
+}
+
+.input-group-append.inside {
+    position: absolute;
+    right: 0;
+}
+
+.input-group-append.inside .btn-outline-none {
+    border: none;
+    z-index: 4;
+    background-color: transparent;
+    color: #6c757d;
+}
+
+.input-group-append.inside .btn-outline-none:hover {
+    background-color: transparent;
+    color: #6c757d;
+}
+
+.input-group-append.inside .btn-outline-none:focus, .btn-outline-none:active, .btn-outline-none:active:focus {
+    box-shadow: none;
+    background: transparent;
+    color: #6c757d;
+}

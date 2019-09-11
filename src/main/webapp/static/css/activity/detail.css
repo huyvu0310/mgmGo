@@ -1,0 +1,184 @@
+#action-bar a {
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+#activity-detail {
+    border: none;
+}
+
+#detail-header {
+    font-size: 1.5rem;
+    padding: 0px;
+}
+
+#detail-title {
+    text-align: left;
+    flex: 1;
+}
+
+#activity-rating {
+    text-align: right;
+}
+
+#activity-rating button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#activity-rating button:hover {
+}
+
+#rating-score {
+    padding: 0px;
+    font-size: 0.7em;
+    text-align: left;
+    color: #fbbe0a;
+}
+
+#rating-star {
+    text-align: left;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    padding: 0px;
+    transform: rotateY(180deg);
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+#star-filled {
+    color: #fbbe0a;
+    position: absolute;
+    z-index: 1
+}
+
+#star-empty {
+    color: #fbbe0a;
+    position: absolute;
+    z-index: 3;
+}
+
+#star-removed {
+    color: #fff;
+    position: absolute;
+    height: 0%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#rateModal button.rate-star {
+    color: #6c757d;
+    font-size: 2.5rem;
+    padding: 0.3rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#rate-close {
+    color: #fff;
+}
+
+#rateModal button.checked {
+    color: #fbbe0a !important;
+}
+
+.comment.user {
+    display: flex;
+}
+
+.display-name {
+    color: #1d76bb;
+
+}
+
+.date-create {
+    color: #6c757d;
+}
+
+.icon-user-comment {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.comment-box {
+    border-radius: 5px;
+    border:none;
+}
+.textarea-comment{
+    border-radius: 5px;
+    font-size: 100%;
+}
+
+.username-comment {
+    font-size: 14px;
+}
+
+.comment .user {
+    flex-direction: row;
+}
+
+pre {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 100%;
+    display: flex;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.address-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.activity-summary {
+    font-size: 16px;
+}
+
+#favorite {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.2em;
+    color: red;
+    margin-top: 2rem;
+}
+
+.comment-form-input{
+    display: flex;
+}
+.right-0{
+    right: 0;
+}
+
+.btn-dropdown-shadow:focus{
+    box-shadow: none;
+}
+.dropdown-icon-color{
+    color: #909090;
+}
+
+#findLocation {
+    border-right: 0.1rem solid white !important;
+    border-left: 0.3rem solid white !important;
+    position:absolute;
+    right: 0px;
+    top: 7px;
+    border:none;
+    padding:2px;
+}

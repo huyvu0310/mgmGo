@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeLeaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title th:text="${activityDetailDTO.getName()}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/activity/detail.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/home/index.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/editPicture/editPicture.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/tags.css}"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta type="text" name="csrf-token" th:content="${_csrf!=null?_csrf.token:''}"/>
+    <meta type="text" name="csrf-header" th:content="${_csrf!=null?_csrf.headerName:'X-CSRF-Token'}"/>
+</head>
+<body>
+<div layout:fragment="main-content" class="content-wrapper container p-0">
+    <th:block th:replace="activity/fragments/upload-picture"></th:block>
+    <div class="container">
+        <div class="card" id="activity-detail">
+            <div class="d-inline-flex">
+                <div class="pr-3">
+                    <h4 th:text="${activityDetailDTO.getName()}" id="detail-title" class="my-0"></h4>
+                </div>
+                <div class="btn-group right-0 position-absolute">
+                    <button type="button" class="btn border-0 btn-dropdown-shadow pt-1 pr-1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-v fa-lg text-secondary" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" th:href="@{/activity/update/{activityId}(activityId=${activityId})}">
+                            <i class="far fa-edit dropdown-icon-color mr-2" aria-hidden="true"></i> Edit
+                        </a>
+                        <button class="dropdown-item" type="button" data-toggle="modal" id="report-button"
+                                data-target="#reportModal">
+                            <i class="far fa-flag dropdown-icon-color mr-2" aria-hidden="true"></i> Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="display-name mt-1 mb-0"> Recommended by
+                <span th:class="${userCreatedInfo.getLevelName()}"
+                      th:text="${userCreatedInfo.getDisplayName()}"></span>
+            </p>
+            <div id="detail-header" class="d-flex py-1">
+                <div id="activity-rating">
+                    <button class="row px-0 mx-0" data-toggle="modal" id="rate-button" data-target="#rateModal">
+                        <div id="rating-star">
+                            <i class="fa fa-star" id="star-filled"></i>
+                            <i class="far fa-star" id="star-empty"></i>
+                            <i class="fa fa-star" id="star-removed"
+                               th:style="'height: '+${activityDetailDTO.getRating()>0?(15+(1-(activityDetailDTO.getRating()/5))*65):100}+'%;'"></i>
+                        </div>
+                        <div id="rating-score" th:text="${activityDetailDTO.getRating()}"
+                             th:class="'px-1'+${activityDetailDTO.getRating()>0?'':' d-none'}"></div>
+                    </button>
+                </div>
+                <button id="favorite"
+                        th:class="${activityDetailDTO.isFavorite()}? 'fa fa-heart mr-2 mt-0':'far fa-heart mr-2 mt-0 text-secondary'">
+                </button>
+            </div>
+        </div>
+        <div th:if="${activityDetailDTO.address != null && activityDetailDTO.address.trim().length() != 0}"
+             class="d-flex my-1"><i class="fas fa-map-marker-alt fa-lg mt-1 text-danger" aria-hidden="true"></i><span
+                class="ml-2" th:text="${activityDetailDTO.address}"></span>
+        </div>
+        <div class="card-body px-0 pt-1">
+            <pre th:text="${activityDetailDTO.description}" class="card-text mb-0"></pre>
+            <div class="tag-box tag-box-display-only">
+                <th:block th:each="tag: ${activityDetailDTO.getTags()}">
+                    <div class="tag-box-element mb-3 mt-1" th:text="${tag.content}"></div>
+                </th:block>
+            </div>
+            <h5 class="mt-3">Comments</h5>
+            <form method="post" id="commentForm" th:object="${commentDTO}">
+                <div class="comment-form-input mb-2">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                    <div class="mr-1">
+                        <img id="user-thumbnail" class="img-thumbnail" width="35" height="35"
+                             th:src="${#authentication.principal.userProfileDTO.imageId!=null}?@{/api/image/}+${#authentication.principal.userProfileDTO.imageId}:@{/static/images/default_profile_picture.png}"
+                             th:alt="${#authentication.principal.userProfileDTO.displayName}">
+                    </div>
+                    <div class="pl-2 pt-1 pr-2 w-100">
+                                <textarea class="form-control textarea-comment"
+                                          th:field="*{content}"
+                                          id="comment__content"
+                                          placeholder="Comment for activities"></textarea>
+                        <div class="mb-2">
+                            <div id="alertComment" class="text-danger text-alert-mes mb-2"></div>
+                            <button class="btn btn-success" type="button" id="send__comment__btn">Comment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="all-comment">
+                <th:block th:replace="activity/fragments/total_comment"></th:block>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="rateModal" tabindex="-1" role="dialog" aria-labelledby="rateModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rateModalLabel">Rate this activity</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input id="activity-id" type="text" th:value="${activityDetailDTO.getId()}" hidden/>
+                    <input id="user-rating" type="text" value="0" hidden/>
+                    <div class="alert d-none" id="rate-return"></div>
+                    <div class="justify-content-center" id="rate-stars">
+                        <button class="fa fa-star rate-star" data-rating='1'></button>
+                        <button class="fa fa-star rate-star" data-rating='2'></button>
+                        <button class="fa fa-star rate-star" data-rating='3'></button>
+                        <button class="fa fa-star rate-star" data-rating='4'></button>
+                        <button class="fa fa-star rate-star" data-rating='5'></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="rate-save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reportModalLabel">Report this activity</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input id="activity-id-report" type="text" th:value="${activityDetailDTO.getId()}" hidden/>
+
+                    <div class="alert d-none" id="report-return"></div>
+
+                    <div id="message-log-report" class="justify-content-center">
+                        <ul>
+                            <li>This activity will be deleted if it has 5 reports.</li>
+                            <li>You need at least 20 reputation to use report feature.</li>
+                            <li>You can only report once and can not undo!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="report-confirm">Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="favorite-return" class="alert create-message-success"></div>
+</div>
+<th:block layout:fragment="custom-script">
+    <script src="/static/js/image.js"></script>
+    <script type="text/javascript" src="/static/js/rate.js"></script>
+    <script type="text/javascript" src="/static/js/comment.js"></script>
+    <script type="text/javascript" src="/static/js/favorite.js"></script>
+    <script type="text/javascript" src="/static/js/report.js"></script>
+    <script type="text/javascript" src="/static/js/lazy-loading.js"></script>
+</th:block>
+
+</body>
+</html>

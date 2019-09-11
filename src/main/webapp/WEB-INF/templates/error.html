@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeLeaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title>404 not found!</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/error.css}"/>
+</head>
+<body>
+
+<div layout:fragment="main-content">
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>Oops!</h1>
+                <div th:if="${errorMessage != null}">
+                    <h2 th:text="${errorMessage}"></h2>
+                </div>
+                <div th:unless="${errorMessage != null}">
+                    <h2>Somethings are wrong</h2>
+                </div>
+            </div>
+            <a href="/">Go TO Homepage</a>
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="custom-script">
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/api/getQuote.js"></script>
+</th:block>
+
+</body>
+</html>

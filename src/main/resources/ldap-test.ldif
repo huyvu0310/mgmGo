@@ -1,0 +1,133 @@
+dn: ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: user
+
+dn: uid=ntran,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: ntran
+userPassword: {SHA}Er/P9eGTlLQEpcoSoJbtqv+48+0=
+
+dn: uid=sfrank,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: sfrank
+userPassword: {SHA}PGraxxqZcPbbFoSOrEoquZEML+0=
+
+dn: uid=dtle.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: dtle.ext
+userPassword: {SHA}wN/sAfv+vA1E2e68FIOPqaOyZQ8=
+
+dn: uid=hntran.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: hntran.ext
+userPassword: {SHA}NtCq2oI0aeD2hHOxAb/akr+Jpmo=
+
+dn: uid=httbui.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: httbui.ext
+userPassword: {SHA}+BemQZlCbhzeghlq5t6UyC1fN0I=
+
+dn: uid=kvdoan.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: kvdoan.ext
+userPassword: {SHA}dylxSryXZ4SGLmQOGoAFVIgIZDU=
+
+dn: uid=ttkngo.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: ttkngo.ext
+userPassword: {SHA}St6vVxWftfsdRn0b0WG9beT91Kc=
+
+dn: uid=hnguyen.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: hnguyen.ext
+userPassword: {SHA}T72s3XYYpBz7sX1qzkSy14/Gids=
+
+dn: uid=vhduong.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: vhduong.ext
+userPassword: {SHA}wimXrIzkKJHgLzAzxygF+hYAcEo=
+
+dn: uid=dhnguyen.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: dhnguyen.ext
+userPassword: {SHA}KSdoUjYxYTK85YV3Wu05UmXS7Qk=
+
+dn: uid=htnguyen.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: htnguyen.ext
+userPassword: {SHA}3A3JfqvnXnk6RMagutXZAYtn1bw=
+
+dn: uid=tdnguyen.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: tdnguyen.ext
+userPassword: {SHA}uRpJLT0tZ+/j0jNmCdQU9V4tY3E=
+
+dn: uid=ttdhuynh.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: ttdhuynh.ext
+userPassword: {SHA}EykcwbJgcg8y9RVU9a+ZvH4Pnng=
+
+dn: uid=ntynguyen.ext,ou=user,dc=mgmgo,dc=com
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+objectClass: uidObject
+ou: user
+uid: ntynguyen.ext
+userPassword: {SHA}QoKoRwcIs9d9YEhXtRLQX+EIDBk=
+
+

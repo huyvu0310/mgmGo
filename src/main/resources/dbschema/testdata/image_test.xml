@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="insert_image_test" author="httbui">
+        <insert tableName="image">
+            <column name="image_data" valueBlobFile="image/dasushi.jpg"/>
+        </insert>
+        <insert tableName="image">
+            <column name="image_data" valueBlobFile="image/king.jpg"/>
+        </insert>
+        <insert tableName="image">
+            <column name="image_data" valueBlobFile="image/Gong1.png"/>
+        </insert>
+        <insert tableName="image">
+            <column name="image_data" valueBlobFile="image/vello.jpg"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

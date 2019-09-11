@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en" xmlns:th="www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<head>
+    <title>mgm go</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/home/index.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/activity/detail.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/auto-complete.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/tags.css}"/>
+    <meta type="text" name="csrf-token" th:content="${_csrf!=null?_csrf.token:''}"/>
+    <meta type="text" name="csrf-header" th:content="${_csrf!=null?_csrf.headerName:'X-CSRF-Token'}"/>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <h3>Create new activity</h3>
+    <div th:if="${errorMessage != null}">
+        <div class="alert-danger alert" th:text="${errorMessage}"></div>
+    </div>
+    <div th:if="${existedActivity != null}">
+        <a class="activity-item" target="_blank" th:href="@{/activity/{id}(id=${existedActivity.id})}"
+           id="activity-link">
+            <div class="activity-img--wrapper col-lg-2 col-4 mr-1 pl-0">
+                <img id="image-on-home-page"
+                     th:src="${existedActivity.images!=null && !existedActivity.images.isEmpty()}?@{/api/image/}+${existedActivity.images.get(0)}:@{/static/images/no-img.png}"
+                     alt=""/>
+            </div>
+            <div>
+                <p class="activity-name activity-summary mb-0 font-weight-bold " th:text="${existedActivity.name}"></p>
+                <div th:if="${existedActivity.address != null && existedActivity.address != ''}"
+                     class="d-flex text-dark">
+                    <i class="fas fa-map-marker-alt fa-lg mt-1 text-danger" aria-hidden="true"></i>
+                    <span class="ml-2" th:text="${existedActivity.address}"></span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="card text-left p-3">
+        <form method="post" action="/activity/create" name="createForm" th:object="${activityDetailDTO}"
+              id="createForm">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" name="name" class="form-control" id="title" placeholder="Enter activity's name"
+                       th:value="${activityDetailDTO.getName()}">
+                <div id="alertName" class="text-danger text-alert-mes"></div>
+                <div class="text-danger text-alert-mes" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" name="description" id="description" rows="3"
+                          placeholder="Enter activity's description"
+                          th:text="${activityDetailDTO.description}"></textarea>
+                <div id="alertDes" class="text-danger text-alert-mes"></div>
+                <div class="text-danger text-alert-mes" th:if="${#fields.hasErrors('description')}"
+                     th:errors="*{description}"></div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <div class="position-relative">
+                    <input type="text" class="form-control pr-1" id="address"
+                           placeholder="Enter activity's address"
+                           th:value="${activityDetailDTO.address}" th:field="*{address}">
+                    <button type="button" class="border-findlocate-btn btn-toggle input-group-text bg-white mr-1"
+                            data-toggle="modal"
+                            data-target="#modalGetLocation" id="findLocation">
+                        <i class="fas fa-search-location"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Tags</label>
+                <div class="tag-box form-control" placeholder="Enter activity's tags">
+                    <div class="auto-complete tag-box-input" id="tag-ac"></div>
+                </div>
+            </div>
+            <button id="submitBtn" type="submit" class="btn btn-success">Create</button>
+            <a th:href="@{/}" class="btn btn-negative">Cancel</a>
+        </form>
+    </div>
+
+    <div class="modal fade" id="modalGetLocation" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Find your location now</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="form-group mr-3 ml-3 mt-2">
+                    <div class="alert d-none" id="gps-return"></div>
+                    <label for="addressInput" id="addressInputLabel"></label>
+                    <input type="text" class="form-control" id="addressInput">
+                </div>
+                <div class="modal-footer">
+                    <div class="spinner-border text-success" role="status" id="spinner">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <button type="button" class="btn btn-success" id="confirmLocationBtn">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<th:block layout:fragment="custom-script">
+    <script src="/static/js/activity.js"></script>
+    <script src="/static/js/auto-complete.js"></script>
+    <script src="/static/js/tags.js"></script>
+</th:block>
+</body>

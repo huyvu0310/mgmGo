@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="create_comment_table" author="hnguyen">
+        <createTable tableName="comment" remarks="comment table">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <column name="content" type="longvarchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_create" type="timestamp">
+            </column>
+            <column name="activity_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_activity_comment" references="activity(id)" deleteCascade="true"/>
+            </column>
+            <column name="user_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_user_comment" references="public.user(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

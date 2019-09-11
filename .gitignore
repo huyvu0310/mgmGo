@@ -1,0 +1,23 @@
+### Maven ###
+target/
+classes/
+.DS_Store
+.settings
+.springBeans
+
+# Eclipse artifacts, including WTP generated manifests
+.classpath
+.project
+spring-*/src/main/java/META-INF/MANIFEST.MF
+# /src/main/java/com/mgmtp/internship/experiences/model/tables/
+
+# IDEA artifacts and output dirs
+*.iml
+.idea
+out
+test-output
+.settings
+.springBeans
+
+#Operating system
+.DS_Store

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="create_activity_table" author="vhduong">
+        <createTable tableName="activity" remarks="activity table">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            
+            <column name="address" type="varchar(255)">
+            </column>
+
+            <column name="description" type="longvarchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by_user_id" type="bigint">
+                <constraints foreignKeyName="fk_activity_user_created_by" references="public.user(id)"/>
+            </column>
+            <column name="updated_by_user_id" type="bigint">
+                <constraints foreignKeyName="fk_activity_user_updated_by" references="public.user(id)"/>
+            </column>
+            <column name="created_date" type="TIMESTAMP"  defaultValueDate="CURRENT_TIMESTAMP">
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name="updated_date" type="TIMESTAMP" defaultValueDate="CURRENT_TIMESTAMP">
+                <constraints nullable="false"></constraints>
+            </column>
+            <column name="active_date" type="TIMESTAMP">
+                <constraints nullable="true"></constraints>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

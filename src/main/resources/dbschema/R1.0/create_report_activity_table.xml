@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="create_report_activity_table" author="vhduong">
+        <createTable tableName="report_activity" remarks="report activity table">
+            <column name="activity_id" type="bigint">
+                <constraints foreignKeyName="fk_report_activity_activity" references="activity(id)" nullable="false" deleteCascade="true"/>
+            </column>
+
+            <column name="user_id" type="bigint">
+                <constraints foreignKeyName="fk_activity_image_user" references="public.user(id)" nullable="false" deleteCascade="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
