@@ -24,7 +24,7 @@
         <thymeleaf-layout-version>2.3.0</thymeleaf-layout-version>
         <bootstrap-version>4.3.0</bootstrap-version>
         <jquery-version>3.1.1</jquery-version>
-        <spring-security-version>5.1.5.RELEASE</spring-security-version>
+        <spring-security-version>5.2.10.RELEASE</spring-security-version>
         <jacoco-version>0.8.2</jacoco-version>
         <spring-ldap-core-version>2.3.2.RELEASE</spring-ldap-core-version>
     </properties>
