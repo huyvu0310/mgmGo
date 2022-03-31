@@ -17,7 +17,7 @@
         <java-version>1.8</java-version>
         <liquibase-version>3.5.5</liquibase-version>
         <postgres-version>42.2.5</postgres-version>
-        <spring-framework>5.1.6.RELEASE</spring-framework>
+        <spring-framework>5.3.18</spring-framework>
         <spring-jdbc>5.0.6.RELEASE</spring-jdbc>
         <jooq.version>3.11.11</jooq.version>
         <thymeleaf-version>3.0.9.RELEASE</thymeleaf-version>
